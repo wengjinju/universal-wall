@@ -24,7 +24,7 @@ assignees: wengjinju
 如适用，请添加截图以帮助说明您的问题。
 
 **环境（请填写以下信息）：**
--操作系统[例如：Windows]
+- 操作系统[例如：Windows]
 - 浏览器[例如：chrome, safari]
 - 版本[例如：1]
 
