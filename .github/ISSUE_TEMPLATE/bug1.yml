@@ -1,47 +1,58 @@
 name: "bug提交"
-description: "bug提交"
-labels: [BUG, 新提交]
+description: "提交程序缺陷或功能异常反馈"
+labels: ["BUG", "新提交"]
+assignees: wengjinju
 body:
-- type: checkboxes
-  id: "yml-1"
-  attributes:
-    label: "检查项"
-    description: "请逐个检查下列项目，并勾选确认。"
-    - label: "我已在 [Issues 页面](https://github.com/wengjinju/universal-wall/issues) 中搜索，确认了这一 Bug 未被提交过。"
+  - type: checkboxes
+    id: "checklist"
+    attributes:
+      label: "检查项"
+      description: "请逐个检查下列项目，并勾选确认。"
+      options:
+        - label: "我已在 [Issues 页面](https://github.com/wengjinju/universal-wall/issues) 中搜索，确认了这一 Bug 未被提交过。"
+          required: true
+
+  - type: textarea
+    id: "description"
+    attributes:
+      label: "问题描述"
+      description: "请详细描述 Bug 的具体表现，包括如何触发、实际结果是什么。"
+      placeholder: "例如：点击按钮后，程序直接崩溃，没有任何报错提示。"
+    validations:
       required: true
-- type: textarea
-  id: "yml-2"
-  attributes:
-    label: 描述
-    description: "详细描述具体表现。"
-  validations:
-    required: true
-- type: textarea
-  id: "yml-2"
-  attributes:
-    label: 预期行为
-    description: "对您期望发生的事情的清晰简洁描述。"
-  validations:
-    required: false
-- type: textarea
-  id: "yml-2"
-  attributes:
-    label: 环境
-    description: "操作系统、浏览器、版本"
-  validations:
-    required: false
-- type: textarea
-  id: "yml-2"
-  attributes:
-    label: 备注
-    description: "在此处添加有关问题的其他背景信息。
-  validations:
-    required: false
-- type: textarea
-  id: "yml-3"
-  attributes:
-    label: 截图
-    description: "请添加截图以帮助解释您的问题。"
-    placeholder: "先点击这个文本框，然后再将文件直接拖拽到文本框中以上传。"
-  validations:
-    required: false
+
+  - type: textarea
+    id: "expected-behavior"
+    attributes:
+      label: "预期行为"
+      description: "描述你期望发生的正确结果是什么。"
+      placeholder: "例如：点击按钮后，应该弹出确认窗口，并执行后续操作。"
+    validations:
+      required: false
+
+  - type: textarea
+    id: "environment"
+    attributes:
+      label: "运行环境"
+      description: "请提供操作系统、浏览器/客户端、程序版本等信息。"
+      placeholder: "操作系统：Windows 11 / macOS 14 / Android 14\n浏览器：Chrome 128.0\n程序版本：v1.0.0"
+    validations:
+      required: false
+
+  - type: textarea
+    id: "additional-notes"
+    attributes:
+      label: "补充说明"
+      description: "在此处添加问题的其他背景信息，如特殊场景、复现概率等。"
+      placeholder: "例如：仅在深色模式下出现，复现概率约50%。"
+    validations:
+      required: false
+
+  - type: textarea
+    id: "screenshots"
+    attributes:
+      label: "截图/录屏"
+      description: "添加截图或录屏可以帮助我们更快定位问题。"
+      placeholder: "先点击这个文本框，然后再将文件直接拖拽到文本框中以上传。"
+    validations:
+      required: false
