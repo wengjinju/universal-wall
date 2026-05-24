@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 问答
+    url: https://github.com/wengjinju/universal-wall/discussions/new?category=q-a
+    about: 向我们寻求帮助
