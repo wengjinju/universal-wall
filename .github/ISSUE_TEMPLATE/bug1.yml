@@ -1,6 +1,6 @@
 name: "bug提交"
 description: "提交程序缺陷或功能异常反馈"
-labels: ["BUG", "新提交"]
+labels: ["bug", "新提交"]
 assignees: wengjinju
 body:
   - type: checkboxes
