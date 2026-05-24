@@ -1,0 +1,59 @@
+name: "优化建议"
+description: "对已有功能的小幅度优化或改进建议"
+labels: ["优化", "新提交"]
+assignees: wengjinju
+body:
+  - type: checkboxes
+    id: "checklist"
+    attributes:
+      label: "检查项"
+      description: "请逐个检查下列项目，并勾选确认。"
+      options:
+        - label: "我已在 [Issues 页面](https://github.com/wengjinju/universal-wall/issues) 中搜索，确认了这一优化建议未被提交过。"
+          required: true
+          我已查看[新功能投票页面](https://github.com/wengjinju/universal-wall/discussions/categories/%E6%96%B0%E5%8A%9F%E8%83%BD%E6%8A%95%E7%A5%A8)，确认了这一建议未在投票列表中。
+
+  - type: textarea
+    id: "description"
+    attributes:
+      label: "优化描述"
+      description: "请详细描述你想优化的内容，以及当前存在的问题或不便之处。"
+      placeholder: "例如：当前的图片裁剪功能操作步骤较多，希望能简化为一键裁剪并保存。"
+    validations:
+      required: true
+
+  - type: textarea
+    id: "current-behavior"
+    attributes:
+      label: "当前表现"
+      description: "描述当前功能的实际表现是什么样的。"
+      placeholder: "例如：现在需要点击「裁剪」→「设置尺寸」→「预览」→「保存」，共4步操作。"
+    validations:
+      required: false
+
+  - type: textarea
+    id: "expected-behavior"
+    attributes:
+      label: "期望优化后的效果"
+      description: "描述你期望优化后的功能是什么样的，能带来什么提升。"
+      placeholder: "例如：希望在图片上传后，直接提供预设尺寸选项，点击即可一键生成裁剪后的图片，减少操作步骤。"
+    validations:
+      required: true
+
+  - type: textarea
+    id: "additional-notes"
+    attributes:
+      label: "补充说明"
+      description: "在此处添加关于优化的其他背景信息，比如使用场景、用户群体等。"
+      placeholder: "例如：这个优化可以提升普通用户的使用效率，减少操作门槛。"
+    validations:
+      required: false
+
+  - type: textarea
+    id: "screenshots"
+    attributes:
+      label: "截图/示例"
+      description: "添加当前功能的截图或你期望效果的示例，可以帮助我们更好理解你的想法。"
+      placeholder: "先点击这个文本框，然后再将文件直接拖拽到文本框中以上传。"
+    validations:
+      required: false
